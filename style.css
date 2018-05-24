@@ -167,7 +167,7 @@ A#galleryNav-next {
   font-style:italic;
   line-height:1.4vw;
   font-weight:300;
-  margin:20vw 3vw 20vw 3vw;;
+  margin:20vw 3vw 20vw 3vw;
   padding:1.5vw 2vw 1.5vw 2vw;
   color:gray;
 }
@@ -237,10 +237,6 @@ A.image-thumbnail {
   background-image:url(/images/tomes/ss01.jpg);
 }
 
-
-
-
-
 #footer {
   position:absolute;
   bottom:0px;
@@ -248,3 +244,169 @@ A.image-thumbnail {
   text-align:center;
   font-weight:300;
 }
+
+@media (max-width:1024px) and (orientation:landscape)  { 
+  /* IPAD LANDSCAPE */
+
+  A:link.page-link, A:visited.page-link, A:active.page-link {
+    text-decoration:none;
+    display: block !important;
+    font-size:3vw;
+    font-weight:100;
+    margin:0 0 1.2vw 0;
+  }
+  A:link.page-link-up, A:visited.page-link-up, A:active.page-link-up {
+    text-decoration:none;
+    display: block !important;
+    font-size:3vw;
+    font-weight:100;
+    font-weight:bold;
+    color:#C12D31;
+    margin:0 0 1.2vw 0;
+  }
+  #artwork-title {
+    margin-top:30vw !important;
+  }
+  .thumbnailGrid {
+    overflow:hidden;
+    width:88vw;
+    height:62vw;
+    margin:auto;
+  }
+  A.image-thumbnail {
+    border-radius:10px;
+    border:0;
+    width:11vw;
+    height:11vw;
+    overflow:hidden;
+    float:left;
+    margin-right:1.5vw;
+    margin-bottom:1.5vw;
+    background-size: cover;
+    background-position:center;
+  }
+}
+@media (max-width:1024px) and (orientation:portrait)  {
+  /* IPAD PORTRAIT */
+
+  NAV#homeNav {
+    width:50vw;
+    height:18vw;
+    position:absolute;
+    background-color:white;
+    left:34%;
+    margin-left:-9vw;
+    margin-top:0vw;
+  }
+  NAV#homeNav H1 {
+    text-align:center;
+    font-weight:100;
+    font-size:7vw;
+    letter-spacing:.3vw;
+    margin:.5vw 0 4vw 2vw;
+  }
+  NAV#homeNav #mainNav {
+    text-align:center;
+    line-height:3vw;
+    width:70%;
+    margin:auto;
+    margin-top:-3vw;
+  }
+  NAV#homeNav A:link, NAV A:visited, NAV A:active {
+    text-decoration:none;
+    margin:0 1.2vw 0 1.2vw;
+    display:inline-block;
+    color:black;
+    font-size:2vw;
+  } 
+  A:link.page-link, A:visited.page-link, A:active.page-link {
+    text-decoration:none;
+    display: block !important;
+    font-size:3vw;
+    font-weight:100;
+    margin:0 0 1.2vw 0;
+  }
+  A:link.page-link-up, A:visited.page-link-up, A:active.page-link-up {
+    text-decoration:none;
+    display: block !important;
+    font-size:3vw;
+    font-weight:100;
+    font-weight:bold;
+    color:#C12D31;
+    margin:0 0 1.2vw 0;
+  }
+  #artwork-title {
+    margin-top:30vw !important;
+  }
+  #galleryNavContainer {
+    bottom:50%;
+  }
+  .thumbnailGrid {
+    overflow:hidden;
+    width:90vw;
+    height:126vw;
+    margin:auto;
+    margin-left:6vw;
+    margin-top:4vw;
+  }
+  A.image-thumbnail {
+    border-radius:10px;
+    border:0;
+    width:16.5vw;
+    height:16.5vw;
+    overflow:hidden;
+    float:left;
+    margin-right:1.5vw;
+    margin-bottom:1.5vw;
+    background-size: cover;
+    background-position:center;
+  }
+}
+@media (max-width:1023px) and (orientation:landscape)  { 
+  #artwork-title {
+    position:absolute;
+    width:22vw;
+    top:10vw;
+  }
+  #galleryNavContainer {
+    bottom:-2vw;
+  }
+  A:link.page-link, A:visited.page-link, A:active.page-link {
+    text-decoration:none;
+    display: block !important;
+    font-size:2.3vw !important;
+    font-weight:100;
+    margin:0 0 1.2vw 0;
+  }
+  A:link.page-link-up, A:visited.page-link-up, A:active.page-link-up {
+    text-decoration:none;
+    display: block !important;
+    font-size:2.3vw !important;
+    font-weight:100;
+    font-weight:bold;
+    color:#C12D31;
+    margin:0 0 1.2vw 0;
+  }
+  .thumbnailGrid {
+    overflow:hidden;
+    width:82vw;
+    height:58vw;
+    margin:auto;
+    margin-top:2.5vw;
+    margin-left:14vw;
+  }
+  A.image-thumbnail {
+    border-radius:10px;
+    border:0;
+    width:9vw ;
+    height:9vw;
+    overflow:hidden;
+    float:left;
+    margin-right:1.5vw;
+    margin-bottom:1.5vw;
+    background-size: cover;
+    background-position:center;
+  }
+}
+
+

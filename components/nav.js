@@ -91,7 +91,6 @@ let MainLinks = React.createClass({
           <a href='/?page=paintings'>Paintings</a>
           <a href='/?page=drawings'>Drawings</a>
           <a href='/?page=tomes'>Tomes</a>
-          <a href='/?page=illustration'>Illustration</a>
           <a href='/?page=photography'>Photography</a>
           <a href=''>Music</a>
           <a href='/?page=about'>About</a>  
