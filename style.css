@@ -1,0 +1,250 @@
+
+BODY {
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  padding:0;
+}
+A {
+  cursor:pointer;
+  color:black;
+  text-decoration:none;
+}
+.homeContainer {
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pageContainer {
+  width:100%;
+  height:100%;
+}
+.pagePane-Left {
+  width:33%;
+  height:100%;
+  float:left;
+  background-color:#FAF8F1;
+  position:fixed;
+}
+.pagePane-Right {
+  width:66%;
+  height:100%;
+  float:right;
+}
+
+/* HOME NAV */
+NAV#homeNav {
+  width:30vw;
+  height:10vw;
+  position:absolute;
+  background-color:white;
+  left:34%;
+}
+NAV#homeNav H1 {
+  text-align:center;
+  font-weight:100;
+  font-size:3.7vw;
+  letter-spacing:.3vw;
+  margin:0 0 4vw 2vw;
+}
+NAV#homeNav #mainNav {
+  text-align:center;
+  margin-top:-3vw;
+  line-height:1.7vw;
+}
+NAV#homeNav A:link, NAV A:visited, NAV A:active {
+  text-decoration:none;
+  margin:0 1.2vw 0 1.2vw;
+  display:inline-block;
+  color:black;
+  font-size:1vw;
+}
+
+/* PAGE NAV */
+NAV#pageNav {
+  width:27vw;
+  height:10vw;
+  padding-left:3vw;
+}
+NAV#pageNav H1 {
+  text-align:center;
+  font-weight:100;
+  font-size:3.7vw;
+  letter-spacing:.3vw;
+  margin:4vw 0;
+  width:27vw;
+}
+NAV#pageNav H1 A {
+  font-size:3.7vw;  
+}
+NAV#pageNav #mainNav {
+  text-align:left;
+  margin:-1vw 0 0 5vw;
+}
+.page-number {
+  width:60%;
+  margin-top:-2.5vw;
+  margin-left:14vw;
+  font-weight:300;
+  font-size:.8vw;
+}
+A:link.page-link, A:visited.page-link, A:active.page-link {
+  text-decoration:none;
+  display: block !important;
+  font-size:1.4vw;
+  font-weight:300;
+  margin:0 0 1vw 0;
+}
+
+A:link.page-link-up, A:visited.page-link-up, A:active.page-link-up {
+  text-decoration:none;
+  display: block !important;
+  font-size:1.4vw;
+  font-weight:300;
+  margin-bottom:1vw;
+  font-weight:bold;
+  color:#C12D31;
+  margin:0 0 1vw 0;
+}
+
+/* GALLERY NAV */
+#galleryNavContainer {
+  vertical-align: bottom;
+  position: absolute;
+  bottom:1vw;
+  width:100%;
+  height:10vw;
+}
+#galleryNav {
+  margin:auto;
+  display:flex;
+  justify-content: center;
+}
+ A:link.galleryNav, A:visited.galleryNav, A:active.galleryNav {
+  width:7vw;
+  height:7vw;
+  margin:0px;
+  padding:0px;
+}
+
+A#galleryNav-prev {
+  background-image: url(/images/icon-prev.png);
+  background-repeat:no-repeat;
+  background-position:2vw 1.2vw;
+  cursor:pointer;
+}
+A#galleryNav-back {
+  background-image: url(/images/icon-gallery.png);
+  background-repeat:no-repeat;
+  background-position:2vw 1vw;
+  cursor:pointer;
+}
+A#galleryNav-next {
+  background-image: url(/images/icon-next.png);
+  background-repeat:no-repeat;
+  background-position:2vw 1.3vw;
+  cursor:pointer;
+}
+
+.gallery-imageBox {
+  padding:5vw;
+  width:60%;
+  height:60%;
+  margin:4vw;
+  display:block;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  cursor:pointer;
+}
+
+#artwork-title {
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  font-size:1vw;
+  text-align:center;
+  font-style:italic;
+  line-height:1.4vw;
+  font-weight:300;
+  margin:20vw 3vw 20vw 3vw;;
+  padding:1.5vw 2vw 1.5vw 2vw;
+  color:gray;
+}
+.thumbnailGrid {
+  overflow:hidden;
+  width:71.5vw;
+  height:49.5vw;
+  margin:auto;
+}
+A.image-thumbnail {
+  border-radius:10px;
+  border:0;
+  width:8.7vw;
+  height:8.7vw;
+  overflow:hidden;
+  float:left;
+  margin-right:1.5vw;
+  margin-bottom:1.5vw;
+  background-size: cover;
+  background-position:center;
+}
+.image-small-outer {
+  padding:2vw;
+  display:inline-block 
+}
+.image-small-box{
+  width:16vw;
+  height:16vw;
+  display:inline-block;
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  cursor:pointer; 
+}
+.image-small {
+  border:0;
+  max-width:20vw;
+  max-height:10vw;
+  margin:auto;
+
+}
+#tomes-box {
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  height:90%;
+  padding-top:20%;
+}
+#tomes-box A {
+  width:16vw;
+  height:20vw;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position: bottom;
+  margin:4vw;
+  text-decoration: none;
+  font-weight:100;
+  font-size:1.5vw;
+}
+#tomes-box #entity {
+  background-image:url(/images/tomes/entity00.jpg);
+}
+#tomes-box #sq {
+  background-image:url(/images/tomes/sq00.jpg);
+}
+#tomes-box #ss {
+  background-image:url(/images/tomes/ss01.jpg);
+}
+
+
+
+
+
+#footer {
+  position:absolute;
+  bottom:0px;
+  font-size:.66vw;
+  text-align:center;
+  font-weight:300;
+}
