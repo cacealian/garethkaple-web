@@ -60,6 +60,7 @@ let App = React.createClass({
                         <div id="tomes-box">
                             <a href="?page=artwork&gallery=tomes&index=0" id="sq">Slidden Quill</a>
                             <a href="?page=artwork&gallery=tomes&index=24" id="entity">Entity</a>
+                            <div className="clear"></div>
                             <a href="?page=artwork&gallery=tomes&index=54" id="ss">Afterthoughts</a>
                         </div>
                     </div>

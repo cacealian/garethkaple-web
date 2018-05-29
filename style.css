@@ -31,6 +31,11 @@ A {
   width:66%;
   height:100%;
   float:right;
+  padding:0;
+  margin:0;
+}
+.clear {
+  clear:both
 }
 
 /* HOME NAV */
@@ -88,6 +93,7 @@ NAV#pageNav #mainNav {
   margin-left:14vw;
   font-weight:300;
   font-size:.8vw;
+  text-align:center;
 }
 A:link.page-link, A:visited.page-link, A:active.page-link {
   text-decoration:none;
@@ -148,15 +154,16 @@ A#galleryNav-next {
 }
 
 .gallery-imageBox {
-  padding:5vw;
-  width:60%;
-  height:60%;
-  margin:4vw;
-  display:block;
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
   cursor:pointer;
+  display:block;
+  width:90%;
+  height:90%;
+  margin:auto;
+  margin-top:5%;
+  margin-bottom:5%;
 }
 
 #artwork-title {
@@ -207,34 +214,37 @@ A.image-thumbnail {
   max-width:20vw;
   max-height:10vw;
   margin:auto;
-
 }
 #tomes-box {
-  display:flex;
-  justify-content: center;
-  align-content: center;
-  height:90%;
-  padding-top:20%;
+  height:97%;
+  padding-left:10vw;
 }
 #tomes-box A {
   width:16vw;
-  height:20vw;
+  padding-top:22vw;
   background-size:contain;
   background-repeat:no-repeat;
-  background-position: bottom;
+  background-position: top;
   margin:4vw;
   text-decoration: none;
   font-weight:100;
-  font-size:1.5vw;
-}
-#tomes-box #entity {
-  background-image:url(/images/tomes/entity00.jpg);
+  font-size:1.2vw;
+  display:block;
+  float:left;
+  text-align:center;
 }
 #tomes-box #sq {
   background-image:url(/images/tomes/sq00.jpg);
+  margin-top:3vw;
+}
+#tomes-box #entity {
+  background-image:url(/images/tomes/entity00.jpg);
+  margin-top:3vw;
 }
 #tomes-box #ss {
   background-image:url(/images/tomes/ss01.jpg);
+  margin-top:-2vw;
+  margin-left:15vw;
 }
 
 #footer {
@@ -245,9 +255,10 @@ A.image-thumbnail {
   font-weight:300;
 }
 
-@media (max-width:1024px) and (orientation:landscape)  { 
-  /* IPAD LANDSCAPE */
 
+
+@media (max-width:1024px) and (min-width:768px) and (orientation:landscape)  { 
+  /* IPAD LANDSCAPE */
   A:link.page-link, A:visited.page-link, A:active.page-link {
     text-decoration:none;
     display: block !important;
@@ -267,11 +278,31 @@ A.image-thumbnail {
   #artwork-title {
     margin-top:30vw !important;
   }
+  #galleryNav {
+    position:fixed;
+    bottom:1vw;
+    width:31vw;
+    height:5vw;
+  }
+  NAV#homeNav {
+    width:36vw;
+    margin-left:-3vw;
+  }
+  NAV#homeNav H1 {
+    margin-left:5vw;
+  }
+  NAV#homeNav A:link, NAV A:visited, NAV A:active {
+    text-decoration:none;
+    margin:0 1.2vw 0 1.2vw;
+    display:inline-block;
+    color:black;
+    font-size:1.5vw;
+    font-weight:300;
+  }
   .thumbnailGrid {
     overflow:hidden;
     width:88vw;
     height:62vw;
-    margin:auto;
   }
   A.image-thumbnail {
     border-radius:10px;
@@ -285,14 +316,84 @@ A.image-thumbnail {
     background-size: cover;
     background-position:center;
   }
+  #tomes-box A {
+    width:22vw;
+    padding-top:30vw;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: top;
+    margin:0vw;
+    text-decoration: none;
+    font-weight:100;
+    font-size:1.2vw;
+    display:block;
+    float:left;
+    text-align:center;
+  }
+  #tomes-box #sq {
+    background-image:url(/images/tomes/sq00.jpg);
+    margin:4vw 1vw 0 0;
+  }
+  #tomes-box #entity {
+    background-image:url(/images/tomes/entity00.jpg);
+    margin:4vw 0 0 3vw;
+  }
+  #tomes-box #ss {
+    background-image:url(/images/tomes/ss01.jpg);
+    margin-top:4vw;
+    margin-left:12vw;
+  }
 }
-@media (max-width:1024px) and (orientation:portrait)  {
-  /* IPAD PORTRAIT */
 
+@media (max-width:1024px) and (min-width:768px) and (orientation:portrait)  {
+  /* IPAD PORTRAIT */
+  .homeContainer {
+    margin-top:0 !important;
+  }
+  .pagePane-Left {
+    height:25vw;
+    width:100%;
+    background-color:#FAF8F1;
+    position:fixed;
+  }
+  .pagePane-Right {
+    display:block;
+    float:none;
+    padding:30vw 0;
+    width:100%;
+  }
+  .gallery-imageBox {
+    margin-top:15vw !important;
+    margin:auto;
+    background-position:center top;
+  }
+  #pageNav {
+    width:100% !important;
+  }
+  #mainNav {
+    width:100vw;
+    margin:2vw 0vw 0 1.5vw !important;
+  }
+  #galleryNavContainer {
+    position:static;
+    width:100%; 
+    background-color:white;
+    margin-top:-40vw;
+  }
+  .homeContainer {
+    margin-top:20vw !important;
+  }
+  #homeNav {
+    margin-top:-23vw !important;
+  }
+  #gallery-grid {
+
+    width:88vw;
+    margin:auto;
+  }
   NAV#homeNav {
     width:50vw;
     height:18vw;
-    position:absolute;
     background-color:white;
     left:34%;
     margin-left:-9vw;
@@ -310,7 +411,8 @@ A.image-thumbnail {
     line-height:3vw;
     width:70%;
     margin:auto;
-    margin-top:-3vw;
+    margin-top:-3.5vw !important;
+    margin-left:6vw !important;
   }
   NAV#homeNav A:link, NAV A:visited, NAV A:active {
     text-decoration:none;
@@ -321,25 +423,57 @@ A.image-thumbnail {
   } 
   A:link.page-link, A:visited.page-link, A:active.page-link {
     text-decoration:none;
-    display: block !important;
-    font-size:3vw;
+    display: inline-block !important;
+    font-size:3.5vw !important;
     font-weight:100;
-    margin:0 0 1.2vw 0;
+    margin:0 2.5vw 1.2vw 0;
   }
   A:link.page-link-up, A:visited.page-link-up, A:active.page-link-up {
     text-decoration:none;
-    display: block !important;
-    font-size:3vw;
+    display: inline-block !important;
+    font-size:3.5vw !important;
     font-weight:100;
     font-weight:bold;
     color:#C12D31;
-    margin:0 0 1.2vw 0;
+    margin:0 2.5vw 1.2vw 0;
+  }
+  #tomes-box A {
+    width:32vw;
+    padding-top:44vw;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: top;
+    margin:0vw;
+    text-decoration: none;
+    font-weight:100;
+    font-size:1.2vw;
+    display:block;
+    float:left;
+    text-align:center;
+  }
+  #tomes-box #sq {
+    background-image:url(/images/tomes/sq00.jpg);
+    margin:2vw 1vw 0 0;
+  }
+  #tomes-box #entity {
+    background-image:url(/images/tomes/entity00.jpg);
+    margin:2vw 0 0 11vw;
+  }
+  #tomes-box #ss {
+    background-image:url(/images/tomes/ss01.jpg);
+    margin-top:4vw;
+    margin-left:21vw;
   }
   #artwork-title {
-    margin-top:30vw !important;
+    margin-top:4vw !important;
+    margin-bottom:4vw
   }
   #galleryNavContainer {
-    bottom:50%;
+    margin-top:2vw !important;
+    position:static;
+  }
+  #image {
+    height:90vw;
   }
   .thumbnailGrid {
     overflow:hidden;
@@ -362,7 +496,14 @@ A.image-thumbnail {
     background-position:center;
   }
 }
-@media (max-width:1023px) and (orientation:landscape)  { 
+
+  /* IPHONE LANDSCAPE */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
   #artwork-title {
     position:absolute;
     width:22vw;
@@ -407,6 +548,123 @@ A.image-thumbnail {
     background-size: cover;
     background-position:center;
   }
+  #tomes-box A {
+    width:16vw;
+    padding-top:22vw;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: top;
+    margin:0vw;
+    text-decoration: none;
+    font-weight:100;
+    font-size:1.2vw;
+    display:block;
+    float:left;
+    text-align:center;
+  }
+  #tomes-box #sq {
+    background-image:url(/images/tomes/sq00.jpg);
+    margin:3vw 1vw 0 0;
+  }
+  #tomes-box #entity {
+    background-image:url(/images/tomes/entity00.jpg);
+    margin:3vw 0 0 11vw;
+  }
+  #tomes-box #ss {
+    background-image:url(/images/tomes/ss01.jpg);
+    margin-top:4vw;
+    margin-left:12vw;
+  }
 }
 
+/* IPHONE PORTRAIT */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .pagePane-Left {
+      height:25vw;
+      width:100%;
+      background-color:#FAF8F1;
+      position:fixed;
+    }
+    .pagePane-Right {
+      display:block;
+      float:none;
+      padding:30vw 0;
+      width:100%;
+    }
+  
+    .gallery-imageBox {
+      margin-top:15vw !important;
+      margin:auto;
+      background-position:center top;
+    }
+    #pageNav {
+      width:100% !important;
+    }
+    #mainNav {
+      width:100vw;
+      margin:2vw 0vw 0 1.5vw !important;
+    }
+    .homeContainer {
+      margin-top:20vw !important;
+    }
+    #homeNav {
+      margin-top:-23vw !important;
+    }
+    #gallery-grid {
+  
+      width:88vw;
+      margin:auto;
+    }
+    #artwork-title {
+      margin-top:4vw !important;
+      width:40vw;
+      margin:auto;
+    }
+    #galleryNavContainer {
+      position:static;
+      width:100%; 
+      margin:auto;
+      padding-top:5vw;
+      background-color:white;
+    }
+    A:link.page-link, A:visited.page-link, A:active.page-link {
+      text-decoration:none;
+      display: inline-block !important;
+      font-size:3.5vw !important;
+      font-weight:100;
+      margin:0 2.5vw 1.2vw 0;
+    }
+    A:link.page-link-up, A:visited.page-link-up, A:active.page-link-up {
+      text-decoration:none;
+      display: inline-block !important;
+      font-size:3.5vw !important;
+      font-weight:100;
+      font-weight:bold;
+      color:#C12D31;
+      margin:0 2.5vw 1.2vw 0;
+    }
+    .image-small-outer {
+      padding:2vw;
+      display:inline-block ;
+    }
+    .image-small-box{
+      width:25vw;
+      height:25vw;
+      display:inline-block;
+      background-size:contain;
+      background-position:center;
+      background-repeat:no-repeat;
+      cursor:pointer; 
+    }
+    .image-small {
+      border:0;
+      max-width:25vw;
+      max-height:25vw;
+      margin:auto;
+    }
+  }
 

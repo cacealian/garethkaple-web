@@ -10,7 +10,7 @@ let ImageGrid = React.createClass({
   },
   render: function () {
     return (
-      <div>
+      <div id="gallery-grid">
         {this.createImageGrid()}
       </div>
     );
@@ -73,7 +73,7 @@ let Artwork = React.createClass({
   },
   render: function () {
     return (
-        <div>
+        <div id="image">
           <Image image={this.getImage(this.props.index)} gallery={this.props.gallery}/>
           <div className="page-number">{this.getPageNumber(this.props.index)}</div>
         </div>
