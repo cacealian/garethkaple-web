@@ -2,6 +2,7 @@
 let page = getQueryVariable("page");
 let index = getQueryVariable("index");
 let gallery = getQueryVariable("gallery");
+let position = getQueryVariable("position");
 
 let galleries = [
     paintings,
@@ -61,7 +62,7 @@ let App = React.createClass({
                             <a href="?page=artwork&gallery=tomes&index=0" id="sq">Slidden Quill</a>
                             <a href="?page=artwork&gallery=tomes&index=24" id="entity">Entity</a>
                             <div className="clear"></div>
-                            <a href="?page=artwork&gallery=tomes&index=54" id="ss">Afterthoughts</a>
+                            <a href="?page=artwork&gallery=tomes&index=54" id="ss">Square Scenes</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +101,9 @@ let App = React.createClass({
                         <Footer />        
                     </div>
                     <div className="pagePane-Right">
-                       about
+                        <div id="about">
+                            <img id="absolutLg" src="/images/illustration/absolut.jpg" />
+                        </div>
                     </div>
                 </div>
             );
@@ -109,9 +112,9 @@ let App = React.createClass({
                 <div className="pageContainer">
                     <div className="pagePane-Left">
                         <PageNav gallery={gallery}/>
-                        <GalleryTitle gallery={gallery}/>
+                        <GalleryTitle gallery={gallery} />
                         <div id="galleryNavContainer">
-                            <GalleryNav index={index} gallery={gallery} />
+                            <GalleryNav index={index} gallery={gallery} position={position}/>
                         </div> 
                         <Footer />       
                     </div>

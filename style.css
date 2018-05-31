@@ -38,6 +38,7 @@ A {
   clear:both
 }
 
+
 /* HOME NAV */
 NAV#homeNav {
   width:30vw;
@@ -87,14 +88,7 @@ NAV#pageNav #mainNav {
   text-align:left;
   margin:-1vw 0 0 5vw;
 }
-.page-number {
-  width:60%;
-  margin-top:-2.5vw;
-  margin-left:14vw;
-  font-weight:300;
-  font-size:.8vw;
-  text-align:center;
-}
+
 A:link.page-link, A:visited.page-link, A:active.page-link {
   text-decoration:none;
   display: block !important;
@@ -152,17 +146,28 @@ A#galleryNav-next {
   background-position:2vw 1.3vw;
   cursor:pointer;
 }
-
+#image {
+  margin-top:0vw !important;
+}
+.page-number {
+  width:100%;
+  font-weight:300;
+  font-size:1.2vw;
+  text-align:center;
+  margin:auto;
+  display:inline-block;
+  margin-top:3vw;
+}
 .gallery-imageBox {
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
   cursor:pointer;
   display:block;
-  width:90%;
-  height:90%;
+  width:85%;
+  height:85%;
   margin:auto;
-  margin-top:5%;
+  margin-top:1%;
   margin-bottom:5%;
 }
 
@@ -227,7 +232,7 @@ A.image-thumbnail {
   background-position: top;
   margin:4vw;
   text-decoration: none;
-  font-weight:100;
+  font-weight:300;
   font-size:1.2vw;
   display:block;
   float:left;
@@ -250,13 +255,21 @@ A.image-thumbnail {
 #footer {
   position:absolute;
   bottom:0px;
-  font-size:.66vw;
+  font-size:.8vw;
   text-align:center;
   font-weight:300;
+  width:33vw;
+  padding-bottom:1vw;
+}
+#about {
+  text-align:center;
+}
+#absolutLg {
+  border:1px solid red;
+  height:40vw;
 }
 
-
-
+/* MEDIA QUERIES */
 @media (max-width:1024px) and (min-width:768px) and (orientation:landscape)  { 
   /* IPAD LANDSCAPE */
   A:link.page-link, A:visited.page-link, A:active.page-link {
@@ -280,9 +293,10 @@ A.image-thumbnail {
   }
   #galleryNav {
     position:fixed;
-    bottom:1vw;
+    bottom:4.5vw;
     width:31vw;
     height:5vw;
+    margin-left:1vw;
   }
   NAV#homeNav {
     width:36vw;
@@ -324,7 +338,7 @@ A.image-thumbnail {
     background-position: top;
     margin:0vw;
     text-decoration: none;
-    font-weight:100;
+    font-weight:300;
     font-size:1.2vw;
     display:block;
     float:left;
@@ -445,7 +459,7 @@ A.image-thumbnail {
     background-position: top;
     margin:0vw;
     text-decoration: none;
-    font-weight:100;
+    font-weight:300;
     font-size:1.2vw;
     display:block;
     float:left;
@@ -556,8 +570,8 @@ A.image-thumbnail {
     background-position: top;
     margin:0vw;
     text-decoration: none;
-    font-weight:100;
-    font-size:1.2vw;
+    font-weight:300 !important;
+    font-size:1.4vw;
     display:block;
     float:left;
     text-align:center;

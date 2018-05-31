@@ -110,17 +110,28 @@ let MainLinks = React.createClass({
 });
 
 let GalleryNav = function statelessFunctionComponentClass(props) {
+  let prevURL;
+  let nextURL;
+  let backURL = "/?page=" + props.gallery;
   let index = props.index;
   let prevIndex = (Number(index)-1);
   let nextIndex = (Number(index)+1);
-  let prevURL = "/?page=artwork&gallery=" + props.gallery + "&index=" + prevIndex;
-  let back = "/?page=" + props.gallery;
-  let nextURL = "/?page=artwork&gallery=" + props.gallery + "&index=" + nextIndex;
-
+  prevURL = "/?page=artwork&gallery=" + props.gallery + "&index=" + prevIndex;
+  nextURL = "/?page=artwork&gallery=" + props.gallery + "&index=" + nextIndex;
+  let startEnd = galleries[2][index].startEnd;
+  
+  if(startEnd=="start") {
+    prevURL = backURL;
+    startEnd = "";
+  } else if (startEnd=="end") {
+    nextURL = backURL;
+    startEnd = "";  
+  }
+ 
   return (
     <nav id="galleryNav">
       <a href={prevURL} id="galleryNav-prev" className="galleryNav"></a>
-      <a href={back} id="galleryNav-back" className="galleryNav"></a>
+      <a href={backURL} id="galleryNav-back" className="galleryNav"></a>
       <a href={nextURL} id="galleryNav-next" className="galleryNav"></a>
     </nav>
   );

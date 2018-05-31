@@ -74,8 +74,8 @@ let Artwork = React.createClass({
   render: function () {
     return (
         <div id="image">
-          <Image image={this.getImage(this.props.index)} gallery={this.props.gallery}/>
           <div className="page-number">{this.getPageNumber(this.props.index)}</div>
+          <Image image={this.getImage(this.props.index)} gallery={this.props.gallery}/>
         </div>
     )
   }
@@ -89,7 +89,7 @@ let GalleryTitle = React.createClass({
         case 'drawings':
           return "1982-1995. All works approx 18” x 24";
         case 'tomes':
-          return "1982-1995. Varying sizes and media";
+          return "Graphic books from the 90's";
         case 'illustration':
           return "1982-1995. Varying sizes and media";
         case 'photography':
